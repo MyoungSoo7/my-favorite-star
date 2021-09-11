@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  my-favorite-star:
+    build:
+      context: .
+    ports:
+    - 80:5000
+  mongo:
+    image: mongo
+    ports:
+    - 27017:27017
+    volumes:
+    - mongo:/data/db
+
+volumes:
+  mongo:
